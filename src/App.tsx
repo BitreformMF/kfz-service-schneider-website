@@ -29,26 +29,26 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src="https://chrtxeocxkifcoepngvz.supabase.co/storage/v1/object/public/kfz-schneider/schneider_logo_white.png"
               alt="Kfz-Service Schneider Logo"
               className="h-12 w-auto"
             />
-          </div>
+          </Link>
           
           <div className="hidden md:flex items-center gap-8">
             {["Startseite", "Leistungen", "Kontakt"].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+              <a
+                key={item}
+                href={`/#${item.toLowerCase().replace(" ", "-")}`}
                 className="text-sm font-semibold text-slate-300 hover:text-brand-red transition-colors"
               >
                 {item}
               </a>
             ))}
-            <a 
-              href="#kontakt" 
+            <a
+              href="/#kontakt"
               className="bg-brand-red text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-red/90 transition-all shadow-lg shadow-brand-red/20"
             >
               Termin anfragen
@@ -71,9 +71,9 @@ const Navbar = () => {
           className="md:hidden bg-black border-b border-white/10 py-4 px-4 space-y-4"
         >
           {["Startseite", "Leistungen", "Kontakt"].map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+            <a
+              key={item}
+              href={`/#${item.toLowerCase().replace(" ", "-")}`}
               className="block text-lg font-semibold text-slate-200"
               onClick={() => setIsOpen(false)}
             >
@@ -566,6 +566,10 @@ const DatenschutzPage = () => {
           <p>Anbieter ist die Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA (nachfolgend Vercel).</p>
           <p className="mt-2">Vercel ist eine Cloud-Plattform, über die wir unsere Website bereitstellen. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-brand-red underline">https://vercel.com/legal/privacy-policy</a>.</p>
           <p className="mt-2">Die Verwendung von Vercel erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.</p>
+
+          <h3 className="font-bold mb-1 mt-4">Domain-Registrierung bei GoDaddy</h3>
+          <p>Unsere Domain ist über GoDaddy.com, LLC, 2155 E GoDaddy Way, Tempe, AZ 85284, USA registriert. GoDaddy fungiert als Domain-Registrar und verwaltet die DNS-Einstellungen unserer Domain. Im Rahmen der Domain-Registrierung werden die erforderlichen WHOIS-Daten gemäß den ICANN-Richtlinien gespeichert. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Weitere Informationen finden Sie in der Datenschutzerklärung von GoDaddy: <a href="https://www.godaddy.com/legal/agreements/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-brand-red underline">https://www.godaddy.com/legal/agreements/privacy-policy</a>.</p>
+          <p className="mt-2">Die Nutzung von GoDaddy erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen Registrierung und Verwaltung unserer Domain.</p>
         </section>
 
         <section>
